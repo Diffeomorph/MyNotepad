@@ -12,3 +12,7 @@ I have changed the colour to Red from black and added a slightly different shade
 I have changed the add new note to the android pencil icon.
 
 ![alt text](https://cloud.githubusercontent.com/assets/16365833/12531494/1eb9b7b4-c1f4-11e5-97b9-d23ef6d4e69e.png)
+
+and
+
+![alt text](https://cloud.githubusercontent.com/assets/16365833/12531511/9e390436-c1f4-11e5-9c21-047e87876db7.png)
