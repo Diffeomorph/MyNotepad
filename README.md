@@ -9,3 +9,5 @@ I have changed the notes to CardViews.
 
 I have changed the colour to Red from black and added a slightly different shade of red statusbar.
 
+I have changed the add new note to the android pencil icon.
+
