@@ -1,5 +1,7 @@
 # MyNotepad
-Android notepad app
+Android notepad app.
+
+I encourage people to make improvements to this app.
 
 I have updated the graphics and layout of the following app, https://github.com/mick88/notepad. 
 
