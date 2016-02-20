@@ -1,5 +1,6 @@
+
 /**
- * 
+ *
  */
 package com.nicae.Notepad.notes;
 
@@ -22,7 +23,7 @@ import java.util.Locale;
 
 /**
  * @author Michal
- * 
+ *
  */
 public class Note
 {
@@ -89,7 +90,7 @@ public class Note
 	}
 
 	public String getStart(int numberCharacters, boolean ignoreNewline,
-			boolean addEllipsis)
+						   boolean addEllipsis)
 	{
 		String s = ignoreNewline ? text : text.trim();
 		int end = Math.min(numberCharacters, s.length());
@@ -125,7 +126,7 @@ public class Note
 	public void popupHyperlinks(final ActionBarActivity activity)
 	{
 		if (hyperlinks.isEmpty()) return;
-		
+
 		LinkListDialog dialog = new LinkListDialog();
 		dialog.setHyperlinks(this.hyperlinks);
 		dialog.setLinkListener(new LinkListener()
@@ -178,17 +179,17 @@ public class Note
 
 	/**
 	 * Loads a note from file
-	 * 
+	 *
 	 * @return
 	 * @throws IOException
 	 */
 	public static Note newFromFile(NoteManager noteManager, Context context,
-			String filename) throws IOException
+								   String filename) throws IOException
 	{
 		FileInputStream inputFileStream = context.openFileInput(filename);
 		StringBuilder stringBuilder = new StringBuilder();
 		byte[] buffer = new byte[BUFFER_SIZE];
-        int len;
+		int len;
 		while ((len = inputFileStream.read(buffer)) > 0)
 		{
 			String line = new String(buffer, 0, len);
@@ -204,7 +205,7 @@ public class Note
 
 		return n;
 	}
-	
+
 	public static Note newFromClipboard(NoteManager noteManager, NotepadApplication application)
 	{
 		CharSequence string = application.getClipboardString();

@@ -11,22 +11,33 @@
         android:theme="@style/AppTheme"
         android:allowBackup="true"
         android:allowClearUserData="true">
+
+        <activity
+            android:name="com.nicae.Notepad.notes.SplashScreen"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <activity
             android:name="com.nicae.Notepad.note_list.NotepadListActivity"
             android:label="@string/title_activity_notepad_list"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
-            android:theme="@style/AppTheme"
-            >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:theme="@style/AppTheme" >
+
             <intent-filter >
             	<action android:name="android.intent.action.SEND" />
             	<category android:name="android.intent.category.DEFAULT" />
             	<data android:mimeType="text/*" />
             </intent-filter>
+
         </activity>
+
         <activity
             android:name="com.nicae.Notepad.note_edit.NoteEditActivity"
             android:label="@string/titleEditNote" 

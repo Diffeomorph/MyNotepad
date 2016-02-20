@@ -1,6 +1,7 @@
 package com.nicae.Notepad.note_list;
 
 import android.annotation.TargetApi;
+import android.app.AlertDialog;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
@@ -66,13 +67,13 @@ public class NotepadListActivity extends ActionBarActivity implements
 		noteManager.loadNotes();
 		loadNotes();
 
-		/* Handling incoming intent */
+
 		Intent intent = getIntent();
 		String type = intent.getType(), action = intent.getAction();
 
 		if (type != null && Intent.ACTION_SEND.equals(action))
 		{
-			/* Intent received */
+
 			if (type.startsWith("text/"))
 			{
 				String sharedText = intent.getStringExtra(Intent.EXTRA_TEXT);
@@ -474,6 +475,11 @@ public class NotepadListActivity extends ActionBarActivity implements
 		case R.id.addNote:
 			openNote(new Note(noteManager));
 			break;
+
+			case R.id.about:
+				final AlertDialog aboutDialog = new AboutDialog(this);
+				aboutDialog.show();
+				return true;
 
 				case android.R.id.home:
 			break;
